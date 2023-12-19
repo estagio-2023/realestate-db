@@ -96,7 +96,7 @@ This is an example of how to list things you need to use the software and how to
 ## Roadmap
 
 - [ ] Base de Dados
-    - [ ] Desenho do Modelo de Dados | Diagrama
+    - [X] Desenho do Modelo de Dados | Diagrama
     - [ ] Desenvolvimento do Código para Criar a BD
     - [ ] Documentação
 - [ ] Back-End
