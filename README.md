@@ -79,7 +79,9 @@ Work in Progress
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Base de Dados
 
+[![Product Name Screen Shot][database-diagram]](#)
 
 <!-- GETTING STARTED -->
 ## Como começar
@@ -140,6 +142,7 @@ Project Link: [https://github.com/silva096/app-casas](https://github.com/silva09
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[database-diagram]: BaseDados/BD_Diagrama_02.png
 [product-screenshot]: imagens/product_demo.png
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
