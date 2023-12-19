@@ -16,7 +16,6 @@
     ·
     <a href="https://github.com/silva096/app-casas/issues">Reportar um Bug</a>
     ·
-    <a href="https://github.com/silva096/app-casas/issues">Solicitar uma Funcionalidade</a>
   </p>
 </div>
 
