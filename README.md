@@ -95,10 +95,12 @@ This is an example of how to list things you need to use the software and how to
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Funcionalidade 1
-- [ ] Funcionalidade 2
-- [ ] Funcionalidade 3
-    - [ ] Sub-Funcionalidade
+- [ ] Base de Dados
+    - [ ] Desenho do Modelo de Dados | Diagrama
+    - [ ] Desenvolvimento do Código para Criar a BD
+    - [ ] Documentação
+- [ ] Back-End
+- [ ] Front-End
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
