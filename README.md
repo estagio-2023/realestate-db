@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/silva096/app-casas">
-    <img src="readme/images/casas-high-resolution-logo.png" alt="Logo" width="180" height="150">
+    <img src="imagens/logo/casas-high-resolution-logo.png" alt="Logo" width="180" height="150">
   </a>
 
 <h3 align="center">Aplicação Casas</h3>
@@ -116,7 +116,7 @@ Project Link: [https://github.com/silva096/app-casas](https://github.com/silva09
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: readme/images/product_demo.png
+[product-screenshot]: imagens/product_demo.png
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
