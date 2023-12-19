@@ -22,9 +22,9 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- Índice -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Índice</summary>
   <ol>
     <li>
       <a href="#about-the-project">Sobre o Projeto</a>
