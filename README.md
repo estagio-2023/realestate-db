@@ -50,6 +50,29 @@
 
 [![Product Name Screen Shot][product-screenshot]](#)
 
+### Definições
+- **Imóvel**: propriedade que é inserida por forma a ser anunciada na aplicação.
+
+- **Vendedor**: pessoa da agência imobiliária que trata da burocracia e de mostrar a casa.
+
+- **Cliente**: aquele que se regista na aplicação para posteriormente anunciar o seu imóvel.
+
+- **Pedido de Visita**: quando um potêncial comprador submete os seus dados por forma a agendar uma visita ao imóvel.
+
+- **Tipo de Imóvel**: o tipo de propriedade a ser anunciada.
+(Garagem, Quarto, Moradia, Apartamento, Estúdio)
+
+- **Cidades**: Lista de cidades de Portugal
+
+- **Comodidades**: o tipo de extras que a propriedade tem.
+(Lavandaria, Varanda, Piscina, Terraço, Arrecadação)
+
+- **Tipologia**: número de assoalhadas de uma propriedade (se aplicável)
+(T0, T1, T2, T3, T4, T5)
+
+### Regras de Negócio
+Work in Progress
+
 ### Tecnologias
 
 * [![Angular][Angular.io]][Angular-url]
