@@ -71,7 +71,15 @@
 (T0, T1, T2, T3, T4, T5)
 
 ### Regras de Negócio
-Work in Progress
+Os vendedores estão associados a um imóvel, por forma a ficarem responsáveis pelas visitas e burocracias, no caso de uma proposta para aquisição da propriedade.
+Cada imóvel anunciado possui um vendedor associado.
+
+Sempre que um cliente pretenda fazer uso da plataforma para anunciar a sua propriedade, deve registar-se.
+Este deve providenciar todas as informações necessárias (Nome, Email, Palavra Passe).
+
+No momento em que regista a propriedade para ser anunciada, o cliente deve indicar quais as comodidades que tem, o tipo de imóvel, a cidade onde pertence e a tipologia da mesma.
+
+Sempre que um potencial comprador, queira visitar a casa, devemos registar as suas informações (nome, email)
 
 ### Tecnologias
 
