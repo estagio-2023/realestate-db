@@ -1,2 +1,35 @@
 O código da base de dados deve ser submetido a um Pull Request e enviado para aqui.
 (Criar novo ficheiro texto e adicionar o código para já)
+
+-- Tabela Vendedor
+CREATE TABLE Vendedor (
+id INT PRIMARY KEY,
+Nome VARCHAR(255),
+Telemovel VARCHAR(15),
+Email VARCHAR(255)
+);
+
+-- Tabela Cliente
+CREATE TABLE Cliente (
+Id INT PRIMARY KEY,
+Nome VARCHAR(255),
+Email VARCHAR(255),
+Palavra_Passe VARCHAR(255)
+);
+
+-- Tabela Pedido_Visita
+CREATE TABLE Pedido_Visita (
+Id INT PRIMARY KEY,
+Primeiro_Nome VARCHAR(255),
+Ultimo_Nome VARCHAR(255),
+Email VARCHAR(255)
+);
+
+-- Tabela Imovel_Comodidades
+CREATE TABLE Imovel_Comodidades (
+Id_Imovel INT,
+Id_Comodidades INT,
+PRIMARY KEY (Id_Imovel, Id_Comodidades),
+FOREIGN KEY (Id_Imovel) REFERENCES Tabela_Imovel (id), -- Substitua "Tabela_Imovel" pelo nome real da tabela de imóveis
+FOREIGN KEY (Id_Comodidades) REFERENCES Tabela_Comodidades (id) -- Substitua "Tabela_Comodidades" pelo nome real da tabela de comodidades
+);
