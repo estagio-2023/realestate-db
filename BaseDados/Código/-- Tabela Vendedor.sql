@@ -3,9 +3,7 @@ CREATE TABLE vendedor (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(150),
     telemovel VARCHAR(13),
-    email VARCHAR(150) UNIQUE,
-    CONSTRAINT vendedor_nome_not_null CHECK (nome IS NOT NULL),
-    CONSTRAINT vendedor_email_not_null CHECK (email IS NOT NULL)
+    email VARCHAR(150) UNIQUE
 );
 
 -- Tabela Cliente
