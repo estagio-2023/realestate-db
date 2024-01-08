@@ -94,16 +94,16 @@ Sempre que um potencial comprador, queira visitar a casa, devemos registar as su
 <!-- GETTING STARTED -->
 ## Como começar
 
-Exemplo de como devem ser providenciadas as instruções sob como fazer o setup local do projeto.
-Para ter o projeto a correr, devem ser seguidos os seguintes passos.
+Para esse projeto, será necessário seguir os passos abaixo:
 
-### Prerequisitos
+### Fazer download do PostgreSQL
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+  <ol>
+    <li>Faça o download do PostgreSQL através do link <a href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a> de acordo com seu sistema operacional</li>
+    <li>Defina um password para o superuser da database. Podes usar "postgres", por exemplo, e deixar todas as opções como default. </br> <img src="imagens/instructions/password pgsql.jpg" alt="password screenshot"></li>
+    <li>Para começar a utilizar o programa, procure por pgAdmin4 e execute.</li>
+    
+  </ol>
 
 ### Instalação
 
