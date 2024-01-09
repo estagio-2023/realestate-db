@@ -1,2 +1,71 @@
 O código da base de dados deve ser submetido a um Pull Request e enviado para aqui.
 (Criar novo ficheiro texto e adicionar o código para já)
+
+
+
+CREATE TABLE tipologia
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+descricao varchar(50) );
+
+CREATE TABLE comodidades
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+descricao varchar(50) );
+
+CREATE TABLE cidades
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+descricao varchar(50) );
+
+CREATE TABLE tipo_imovel
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+descricao varchar(50) );
+
+
+INSERT INTO tipo_imovel (descricao) VALUES
+	('Garagem'),
+	('Quarto'),
+	('Moradia'),
+	('Apartamento'),
+	('Estudio');
+	
+	
+
+INSERT INTO comodidades (descricao) VALUES
+	('Lavandaria'),
+	('Varanda'),
+	('Piscina'),
+	('Terraço'),
+	('Arrecadação');
+	
+
+INSERT INTO tipologia (descricao) VALUES
+	('T0'),
+	('T1'),
+	('T2'),
+	('T3'),
+	('T4'),
+	('T5');
+
+INSERT INTO cidades (descricao) VALUES
+	('Odivelas'),
+	('Seixal'),
+	('Gondomar'),
+	('Terraço'),
+	('Valongo'),
+	('Vila Nova de Gaia'),
+	('Aveiro'),
+	('Braga'),
+	('Coimbra'),
+	('Faro'),
+	('Funchal'),
+	('Guimarães'),
+	('Ponta Delgada'),
+	('Póvoa de Varzim'),
+	('Setúbal'),
+	('Sintra'),
+	('Viana do Castelo'),
+	('Vila Franca de Xira'),
+	('Viseu');
+	
+	
+
+
