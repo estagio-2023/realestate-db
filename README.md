@@ -92,11 +92,15 @@ Sempre que um potencial comprador, queira visitar a casa, devemos registar as su
 [![Product Name Screen Shot][database-diagram]](#)
 
 <!-- GETTING STARTED -->
-## Como começar
-
+## Pre Requisitos
+<ul>
+  <li>PostgreSQL</li>
+  <li>Git</li>
+  <li>Visual Studio Code</li>
+</ul>
 Para esse projeto, será necessário seguir os passos abaixo:
 
-### Fazer download do PostgreSQL
+### Download e Instalação do PostgreSQL
 
   <ol>
     <li>Faça o download do PostgreSQL através do link <a href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a> de acordo com seu sistema operacional</li>
@@ -105,23 +109,12 @@ Para esse projeto, será necessário seguir os passos abaixo:
     
   </ol>
 
-### Instalação
+### Fazer download do Git 
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/silva096/app-casas.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<ol>
+    <li>Acesse o link <a href="http://git-scm.com/download/win">http://git-scm.com/download/win </a> e faça o download do git para Windows. O download inciará automaticamente. </li>
+    <li>Quando o git estiver instalado no seu pc, será possível realizar mudanças e controle de versões do projeto no repositório do GitHub, assim como fazer commits e criar branches. </li>  
+  </ol>
 
 
 
