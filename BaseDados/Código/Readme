@@ -1,7 +1,4 @@
 O código da base de dados deve ser submetido a um Pull Request e enviado para aqui.
-(Criar novo ficheiro texto e adicionar o código para já)
-
-
 
 CREATE TABLE tipologia
 (id SERIAL  PRIMARY KEY  NOT NULL ,
@@ -19,15 +16,12 @@ CREATE TABLE tipo_imovel
 (id SERIAL  PRIMARY KEY  NOT NULL ,
 descricao varchar(50) );
 
-
 INSERT INTO tipo_imovel (descricao) VALUES
 	('Garagem'),
 	('Quarto'),
 	('Moradia'),
 	('Apartamento'),
 	('Estudio');
-	
-	
 
 INSERT INTO comodidades (descricao) VALUES
 	('Lavandaria'),
@@ -35,7 +29,6 @@ INSERT INTO comodidades (descricao) VALUES
 	('Piscina'),
 	('Terraço'),
 	('Arrecadação');
-	
 
 INSERT INTO tipologia (descricao) VALUES
 	('T0'),
@@ -66,6 +59,33 @@ INSERT INTO cidades (descricao) VALUES
 	('Vila Franca de Xira'),
 	('Viseu');
 	
-	
+-- Tabela Vendedor
+CREATE TABLE vendedor (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(150),
+    telemovel VARCHAR(13),
+    email VARCHAR(150) UNIQUE
+);
 
+-- Tabela Cliente
+CREATE TABLE cliente (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    palavra_passe VARCHAR(150) NOT NULL
+);
 
+-- Tabela Pedido_Visita
+CREATE TABLE pedido_visita (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(150),
+    email VARCHAR(150) NOT NULL,
+    fk_imovel_id INT
+);
+
+-- Tabela Imovel_Has_Comodidades
+CREATE TABLE imovel_has_comodidades (
+	PRIMARY KEY (fk_imovel_id, fk_comodidades_id),
+    fk_imovel_id INT,
+    fk_comodidades_id INT    
+);
