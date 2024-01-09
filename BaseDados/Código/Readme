@@ -84,7 +84,7 @@ CREATE TABLE pedido_visita (
 );
 
 -- Tabela Imovel_Comodidades
-CREATE TABLE imovel_comodidades (
+CREATE TABLE imovel_has_comodidades (
 	PRIMARY KEY (fk_imovel_id, fk_comodidades_id),
     fk_imovel_id INT,
     fk_comodidades_id INT    
