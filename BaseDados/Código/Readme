@@ -91,11 +91,6 @@ CREATE TABLE imovel_has_comodidades (
 );
 CREATE TABLE IMOVEL (
 imovel_id SERIAL primary key,
-cliente_id INT NOT NULL,
-vendedor_id INT NOT NULL,
-tipo_imovel_id INT NOT NULL,
-cidades_id INT NOT NULL,
-tipologia_id INT NOT NULL,
 titulo VARCHAR(100) NOT NULL,
 morada VARCHAR(200) NOT NULL,
 c_postal VARCHAR(8) NOT NULL,
@@ -104,24 +99,20 @@ ano_construcao DATE NOT NULL,
 preco DECIMAL(8,2) NOT NULL,
 metros_quadrados INT NOT NULL,
 classe_energetica CHAR,
-
-   CONSTRAINT fk_cliente
-      FOREIGN KEY(cliente_id) 
-	  REFERENCES cliente(id),
-   CONSTRAINT fk_vendedor
-	  FOREIGN KEY(vendedor_id)
-	  REFERENCES vendedor(id),
-	CONSTRAINT fk_tipo_imovel
-	  FOREIGN KEY(tipo_imovel_id)
-	  REFERENCES tipo_imovel(id),
-	CONSTRAINT fk_cidades
-	  FOREIGN KEY(cidades_id)
-	  REFERENCES cidades(id),
-	CONSTRAINT fk_tipologia
-      FOREIGN KEY(tipologia_id)
-	  REFERENCES tipologia(id)
-	);
+fk_cliente_id INT,
+fk_vendedor_id INT,
+fk_tipo_imovel_id INT,
+fk_cidades_id INT,
+fk_tipologia_id INT,
+);
 
 ALTER TABLE Imovel_Has_Comodidades 
 	ADD CONSTRAINT fk_imovel_id FOREIGN KEY (fk_imovel_id) REFERENCES imovel(imovel_id),
 	ADD CONSTRAINT fk_comodidades_id FOREIGN KEY (fk_comodidades_id) REFERENCES comodidades(id);
+
+ALTER TABLE imovel
+ADD CONSTRAINT fk_cliente_id FOREIGN KEY (fk_cliente_id) REFERENCES cliente(id),
+ADD CONSTRAINT fk_vendedor_id FOREIGN KEY (fk_vendedor_id) REFERENCES vendedor(id),
+ADD CONSTRAINT fk_tipo_imovel_id FOREIGN KEY (fk_tipo_imovel_id) REFERENCES tipo_imovel(id),
+ADD CONSTRAINT fk_cidades_id FOREIGN KEY (fk_cidades_id) REFERENCES cidades(id),
+ADD CONSTRAINT fk_tipologia_id FOREIGN KEY (fk_tipologia_id) REFERENCES tipologia(id),
