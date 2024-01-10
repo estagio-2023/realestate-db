@@ -102,4 +102,5 @@ classe_energetica CHAR,
 ALTER TABLE Imovel_Has_Comodidades 
 	ADD CONSTRAINT fk_imovel_id FOREIGN KEY (fk_imovel_id) REFERENCES imovel(imovel_id)	
 
-
+ALTER TABLE Imovel_Has_Comodidades 
+	ADD CONSTRAINT fk_comodidades_id FOREIGN KEY (fk_comodidades_id) REFERENCES comodidades(id);
