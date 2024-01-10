@@ -115,4 +115,4 @@ ADD CONSTRAINT fk_cliente_id FOREIGN KEY (fk_cliente_id) REFERENCES cliente(id),
 ADD CONSTRAINT fk_vendedor_id FOREIGN KEY (fk_vendedor_id) REFERENCES vendedor(id),
 ADD CONSTRAINT fk_tipo_imovel_id FOREIGN KEY (fk_tipo_imovel_id) REFERENCES tipo_imovel(id),
 ADD CONSTRAINT fk_cidades_id FOREIGN KEY (fk_cidades_id) REFERENCES cidades(id),
-ADD CONSTRAINT fk_tipologia_id FOREIGN KEY (fk_tipologia_id) REFERENCES tipologia(id),
+ADD CONSTRAINT fk_tipologia_id FOREIGN KEY (fk_tipologia_id) REFERENCES tipologia(id)
