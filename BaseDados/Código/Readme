@@ -89,7 +89,7 @@ CREATE TABLE imovel_has_comodidades (
     fk_imovel_id INT,
     fk_comodidades_id INT    
 );
-CREATE TABLE IMOVEL (
+CREATE TABLE imovel (
 imovel_id SERIAL primary key,
 titulo VARCHAR(100) NOT NULL,
 morada VARCHAR(200) NOT NULL,
