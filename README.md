@@ -98,7 +98,7 @@ Sempre que um potencial comprador, queira visitar a casa, devemos registar as su
   <li>Git</li>
   <li>Visual Studio Code</li>
 </ul>
-Para esse projeto, será necessário seguir os passos abaixo:
+Para este projeto, será necessário seguir os passos abaixo:
 
 ### Download e Instalação do PostgreSQL
 
