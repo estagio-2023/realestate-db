@@ -89,3 +89,30 @@ CREATE TABLE imovel_has_comodidades (
     fk_imovel_id INT,
     fk_comodidades_id INT    
 );
+CREATE TABLE imovel (
+imovel_id SERIAL primary key,
+titulo VARCHAR(100) NOT NULL,
+morada VARCHAR(200) NOT NULL,
+c_postal VARCHAR(8) NOT NULL,
+descricao VARCHAR(200),
+ano_construcao DATE NOT NULL,
+preco DECIMAL(8,2) NOT NULL,
+metros_quadrados INT NOT NULL,
+classe_energetica CHAR,
+fk_cliente_id INT,
+fk_vendedor_id INT,
+fk_tipo_imovel_id INT,
+fk_cidades_id INT,
+fk_tipologia_id INT,
+);
+
+ALTER TABLE Imovel_Has_Comodidades 
+	ADD CONSTRAINT fk_imovel_id FOREIGN KEY (fk_imovel_id) REFERENCES imovel(imovel_id),
+	ADD CONSTRAINT fk_comodidades_id FOREIGN KEY (fk_comodidades_id) REFERENCES comodidades(id);
+
+ALTER TABLE imovel
+ADD CONSTRAINT fk_cliente_id FOREIGN KEY (fk_cliente_id) REFERENCES cliente(id),
+ADD CONSTRAINT fk_vendedor_id FOREIGN KEY (fk_vendedor_id) REFERENCES vendedor(id),
+ADD CONSTRAINT fk_tipo_imovel_id FOREIGN KEY (fk_tipo_imovel_id) REFERENCES tipo_imovel(id),
+ADD CONSTRAINT fk_cidades_id FOREIGN KEY (fk_cidades_id) REFERENCES cidades(id),
+ADD CONSTRAINT fk_tipologia_id FOREIGN KEY (fk_tipologia_id) REFERENCES tipologia(id)
