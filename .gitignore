@@ -6,3 +6,6 @@
 /.vs/app-casas/v17
 /BackEnd/AppCasas API/.vs/AppCasas API/FileContentIndex
 /BackEnd/AppCasas API/.vs/AppCasas API
+/BackEnd/AppCasas API/AppCasas API/bin/Debug/net8.0
+/BackEnd/AppCasas API/AppCasas API/obj
+/.vs
