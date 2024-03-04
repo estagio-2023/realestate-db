@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/app-casas/FileContentIndex
+/.vs/app-casas/v17
+/BackEnd/AppCasas API/.vs/AppCasas API/FileContentIndex
+/BackEnd/AppCasas API/.vs/AppCasas API
