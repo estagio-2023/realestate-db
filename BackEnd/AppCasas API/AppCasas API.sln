@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppCasas API", "AppCasas API\AppCasas API.csproj", "{01E68FD8-FDB7-41D5-857C-0851B6A2C966}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01E68FD8-FDB7-41D5-857C-0851B6A2C966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E68FD8-FDB7-41D5-857C-0851B6A2C966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E68FD8-FDB7-41D5-857C-0851B6A2C966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E68FD8-FDB7-41D5-857C-0851B6A2C966}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {157FB0F1-2BBD-47E8-9F1D-B760D9B343BD}
+	EndGlobalSection
+EndGlobal
