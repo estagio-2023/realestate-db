@@ -1,4 +1,4 @@
-﻿namespace AppCasas_API.Models
+﻿namespace AppCasasAPI.Models
 {
     public class Cidade:ReferenceData
     {
