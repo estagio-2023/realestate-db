@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
     <Folder Include="Dto\" />
     <Folder Include="Repository\" />
     <Folder Include="Services\" />
