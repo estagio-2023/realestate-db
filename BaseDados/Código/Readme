@@ -1,4 +1,4 @@
-O código da base de dados deve ser submetido a um Pull Request e enviado para aqui.
+
 
 CREATE TABLE tipologia
 (id SERIAL  PRIMARY KEY  NOT NULL ,
