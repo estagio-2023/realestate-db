@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/app-casas/FileContentIndex/dbbdcb92-a21f-4ecf-8417-bf157906593b.vsidx
+/.vs/app-casas/v17/.wsuo
+/.vs/app-casas/v17/DocumentLayout.json
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/BackEnd/AppCasasAPI/.vs/AppCasasAPI/FileContentIndex/878e1239-ea4a-49c2-9283-c6b2d6682f47.vsidx
+/BackEnd/AppCasasAPI/.vs/AppCasasAPI/v17/.suo
+/BackEnd/AppCasasAPI/.vs/AppCasasAPI/v17/DocumentLayout.json
+/BackEnd/AppCasasAPI/AppCasasAPI/obj
