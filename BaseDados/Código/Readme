@@ -103,7 +103,7 @@ fk_cliente_id INT,
 fk_vendedor_id INT,
 fk_tipo_imovel_id INT,
 fk_cidades_id INT,
-fk_tipologia_id INT,
+fk_tipologia_id INT
 );
 
 ALTER TABLE Imovel_Has_Comodidades 
