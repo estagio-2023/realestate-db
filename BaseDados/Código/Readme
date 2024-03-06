@@ -1,5 +1,3 @@
-O código da base de dados deve ser submetido a um Pull Request e enviado para aqui.
-
 CREATE TABLE tipologia
 (id SERIAL  PRIMARY KEY  NOT NULL ,
 descricao varchar(50) );
@@ -83,27 +81,27 @@ CREATE TABLE pedido_visita (
     fk_imovel_id INT
 );
 
--- Tabela Imovel_Has_Comodidades
 CREATE TABLE imovel_has_comodidades (
 	PRIMARY KEY (fk_imovel_id, fk_comodidades_id),
     fk_imovel_id INT,
     fk_comodidades_id INT    
 );
+
 CREATE TABLE imovel (
-imovel_id SERIAL primary key,
-titulo VARCHAR(100) NOT NULL,
-morada VARCHAR(200) NOT NULL,
-c_postal VARCHAR(8) NOT NULL,
-descricao VARCHAR(200),
-ano_construcao DATE NOT NULL,
-preco DECIMAL(8,2) NOT NULL,
-metros_quadrados INT NOT NULL,
-classe_energetica CHAR,
-fk_cliente_id INT,
-fk_vendedor_id INT,
-fk_tipo_imovel_id INT,
-fk_cidades_id INT,
-fk_tipologia_id INT
+	imovel_id SERIAL primary key,
+	titulo VARCHAR(100) NOT NULL,
+	morada VARCHAR(200) NOT NULL,
+	c_postal VARCHAR(8) NOT NULL,
+	descricao VARCHAR(200),
+	ano_construcao DATE NOT NULL,
+	preco DECIMAL(8,2) NOT NULL,
+	metros_quadrados INT NOT NULL,
+	classe_energetica CHAR,
+	fk_cliente_id INT,
+	fk_vendedor_id INT,
+	fk_tipo_imovel_id INT,
+	fk_cidades_id INT,
+	fk_tipologia_id INT
 );
 
 ALTER TABLE Imovel_Has_Comodidades 
