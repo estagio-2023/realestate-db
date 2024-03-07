@@ -143,7 +143,7 @@ Project Link: [https://github.com/silva096/app-casas](https://github.com/silva09
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[database-diagram]: BaseDados/DB_Diagrama_03.png
+[database-diagram]: BaseDados/DB_Diagram.png
 [product-screenshot]: imagens/product_demo.png
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
