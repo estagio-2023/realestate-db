@@ -1,0 +1,113 @@
+CREATE TABLE typology
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+description varchar(50) );
+
+CREATE TABLE amenities
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+description varchar(50) );
+
+CREATE TABLE city
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+description varchar(50) );
+
+CREATE TABLE realstate_type
+(id SERIAL  PRIMARY KEY  NOT NULL ,
+description varchar(50) );
+
+INSERT INTO realstate_type (description ) VALUES
+	('Garage'),
+	('Bedroom'),
+	('House'),
+	('apartment'),
+	('studio');
+
+INSERT INTO amenities (description) VALUES
+	('Laundry'),
+	('balcony'),
+	('pool'),
+	('Terrace'),
+	('Storage');
+
+INSERT INTO typology (description) VALUES
+	('T0'),
+	('T1'),
+	('T2'),
+	('T3'),
+	('T4'),
+	('T5');
+
+INSERT INTO City (description) VALUES
+	('Odivelas'),
+	('Seixal'),
+	('Gondomar'),
+	('Terraço'),
+	('Valongo'),
+	('Vila Nova de Gaia'),
+	('Aveiro'),
+	('Braga'),
+	('Coimbra'),
+	('Faro'),
+	('Funchal'),
+	('Guimarães'),
+	('Ponta Delgada'),
+	('Póvoa de Varzim'),
+	('Setúbal'),
+	('Sintra'),
+	('Viana do Castelo'),
+	('Vila Franca de Xira'),
+	('Viseu');
+
+CREATE TABLE Agent (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(150),
+    cellphone VARCHAR(13),
+    email VARCHAR(150) UNIQUE
+);
+
+CREATE TABLE client (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE,
+    password VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE visit_request (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(150),
+    email VARCHAR(150) NOT NULL,
+    fk_realstate_id INT
+);
+
+CREATE TABLE realstate_has_amenities (
+	PRIMARY KEY (fk_realstate_id, fk_amentities_id),
+    fk_realstate_id INT,
+    fk_amentities_id INT    
+);
+
+CREATE TABLE realstate (
+	realstate_id SERIAL primary key,
+	title VARCHAR(100) NOT NULL,
+	adress VARCHAR(200) NOT NULL,
+	zip_code VARCHAR(8) NOT NULL,
+	description VARCHAR(200),
+	build_date DATE NOT NULL,
+	price DECIMAL(8,2) NOT NULL,
+	square_meter INT NOT NULL,
+	energy_class CHAR,
+	fk_client_id INT,
+	fk_agent_id INT,
+	fk_realstate_type_id INT,
+	fk_city_id INT,
+	fk_typology_id INT
+);
+
+ALTER TABLE realstate_has_amenities 
+	ADD CONSTRAINT fk_realstate_id FOREIGN KEY (fk_realstate_id) REFERENCES realstate(realstate_id),
+	ADD CONSTRAINT fk_amenities_id FOREIGN KEY (fk_amenities_id) REFERENCES amenities(id);
+
+ALTER TABLE imovel
+ADD CONSTRAINT fk_client_id FOREIGN KEY (fk_client_id) REFERENCES client(id),
+ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id),
+ADD CONSTRAINT fk_realstate_type_id FOREIGN KEY (fk_realstate_type_id) REFERENCES realstate_type(id),
+ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
+ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id)
