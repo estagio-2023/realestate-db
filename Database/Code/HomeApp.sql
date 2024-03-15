@@ -17,7 +17,7 @@ description varchar(50) );
 CREATE TABLE agent (
     id SERIAL PRIMARY KEY,
     name VARCHAR(150),
-    cellphone VARCHAR(13),
+    phone_number VARCHAR(13),
     email VARCHAR(150) UNIQUE
 );
 
