@@ -38,7 +38,7 @@ CREATE TABLE visit_request (
 CREATE TABLE realestate (
 	id SERIAL primary key,
 	title VARCHAR(100) NOT NULL,
-	adress VARCHAR(200) NOT NULL,
+	address VARCHAR(200) NOT NULL,
 	zip_code VARCHAR(8) NOT NULL,
 	description VARCHAR(200),
 	build_date DATE NOT NULL,
