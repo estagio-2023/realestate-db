@@ -21,7 +21,7 @@ CREATE TABLE agent (
     email VARCHAR(150) UNIQUE
 );
 
-CREATE TABLE client (
+CREATE TABLE customer (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) UNIQUE,
@@ -45,7 +45,7 @@ CREATE TABLE realestate (
 	price DECIMAL(8,2) NOT NULL,
 	square_meter INT NOT NULL,
 	energy_class CHAR,
-	fk_client_id INT,
+	fk_customer_id INT,
 	fk_agent_id INT,
 	fk_realestate_type_id INT,
 	fk_city_id INT,
@@ -63,7 +63,7 @@ ALTER TABLE realestate_has_amenity
 	ADD CONSTRAINT fk_amenity_id FOREIGN KEY (fk_amenity_id) REFERENCES amenity(id);
 
 ALTER TABLE realestate
-ADD CONSTRAINT fk_client_id FOREIGN KEY (fk_client_id) REFERENCES client(id),
+ADD CONSTRAINT fk_customer_id FOREIGN KEY (fk_customer_id) REFERENCES customer(id),
 ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id),
 ADD CONSTRAINT fk_realestate_type_id FOREIGN KEY (fk_realestate_type_id) REFERENCES realestate_type(id),
 ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
