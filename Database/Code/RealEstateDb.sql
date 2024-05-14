@@ -41,7 +41,7 @@ CREATE TABLE realestate (
 	address VARCHAR(200) NOT NULL,
 	zip_code VARCHAR(8) NOT NULL,
 	description VARCHAR(200),
-	build_date DATE NOT NULL,
+	build_date INT NOT NULL,
 	price DECIMAL(8,2) NOT NULL,
 	square_meter INT NOT NULL,
 	energy_class CHAR,
@@ -119,7 +119,7 @@ INSERT INTO agent (name, phone_number, email) VALUES
 ('Jane Smith', '+1234567890', 'janesmith@gmail.com');
 
 INSERT INTO realestate (title, address, zip_code, description, build_date, price, square_meter, energy_class, fk_customer_id, fk_agent_id, fk_realestate_type_id, fk_city_id, fk_typology_id) VALUES 
-('Beautiful House', '123 Main Street', '12345', 'Lovely family home', '2020-01-01', 250000.00, 200, 'A', 1, 1, 1, 1, 1);
+('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1, 1);
 
 INSERT INTO visit_request (name, email, fk_realestate_id) VALUES 
 ('Alice Johnson', 'alice@gmail.com', 1);
