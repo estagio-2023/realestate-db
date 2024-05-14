@@ -41,7 +41,7 @@ CREATE TABLE realestate (
 	address VARCHAR(200) NOT NULL,
 	zip_code VARCHAR(8) NOT NULL,
 	description VARCHAR(200),
-	build_date DATE NOT NULL,
+	build_date INT NOT NULL,
 	price DECIMAL(8,2) NOT NULL,
 	square_meter INT NOT NULL,
 	energy_class CHAR,
