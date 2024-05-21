@@ -46,7 +46,6 @@ CREATE TABLE realestate (
 	square_meter INT NOT NULL,
 	energy_class CHAR,
 	fk_customer_id INT,
-	fk_agent_id INT,
 	fk_realestate_type_id INT,
 	fk_city_id INT,
 	fk_typology_id INT
@@ -64,7 +63,6 @@ ALTER TABLE realestate_has_amenity
 
 ALTER TABLE realestate
 ADD CONSTRAINT fk_customer_id FOREIGN KEY (fk_customer_id) REFERENCES customer(id),
-ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id),
 ADD CONSTRAINT fk_realestate_type_id FOREIGN KEY (fk_realestate_type_id) REFERENCES realestate_type(id),
 ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
 ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id);
@@ -118,8 +116,8 @@ INSERT INTO customer (name, email, password) VALUES
 INSERT INTO agent (name, phone_number, email) VALUES 
 ('Jane Smith', '+1234567890', 'janesmith@gmail.com');
 
-INSERT INTO realestate (title, address, zip_code, description, build_date, price, square_meter, energy_class, fk_customer_id, fk_agent_id, fk_realestate_type_id, fk_city_id, fk_typology_id) VALUES 
-('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1, 1);
+INSERT INTO realestate (title, address, zip_code, description, build_date, price, square_meter, energy_class, fk_customer_id, fk_realestate_type_id, fk_city_id, fk_typology_id) VALUES 
+('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1);
 
 INSERT INTO visit_request (name, email, fk_realestate_id) VALUES 
 ('Alice Johnson', 'alice@gmail.com', 1);
