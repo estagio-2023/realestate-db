@@ -33,8 +33,8 @@ CREATE TABLE visit_request (
     name VARCHAR(150),
     email VARCHAR(150) NOT NULL,
 	date DATE NOT NULL,
-	start_time INT NOT NULL,
-	end_time INT NOT NULL,
+	start_time VARCHAR(5) NOT NULL,
+	end_time VARCHAR(5) NOT NULL,
 	confirmed BOOLEAN NOT NULL,
     fk_realestate_id INT
 );
@@ -125,5 +125,5 @@ INSERT INTO agent (name, phone_number, email) VALUES
 INSERT INTO realestate (title, address, zip_code, description, build_date, price, square_meter, energy_class, fk_customer_id, fk_agent_id, fk_realestate_type_id, fk_city_id, fk_typology_id) VALUES 
 ('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1, 1);
 
-INSERT INTO visit_request (name, email, fk_realestate_id) VALUES 
-('Alice Johnson', 'alice@gmail.com', 1);
+INSERT INTO visit_request (name, email, date, start_time, end_time, confirmed, fk_realestate_id) VALUES 
+('Alice Johnson', 'alice@gmail.com', '2024-08-12', '16:30', '15', true, 1);
