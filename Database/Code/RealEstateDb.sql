@@ -64,14 +64,14 @@ ALTER TABLE realestate_has_amenity
 	ADD CONSTRAINT fk_amenity_id FOREIGN KEY (fk_amenity_id) REFERENCES amenity(id);
 
 ALTER TABLE realestate
-ADD CONSTRAINT fk_customer_id FOREIGN KEY (fk_customer_id) REFERENCES customer(id),
-ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id),
-ADD CONSTRAINT fk_realestate_type_id FOREIGN KEY (fk_realestate_type_id) REFERENCES realestate_type(id),
-ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
-ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id);
+	ADD CONSTRAINT fk_customer_id FOREIGN KEY (fk_customer_id) REFERENCES customer(id),
+	ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id),
+	ADD CONSTRAINT fk_realestate_type_id FOREIGN KEY (fk_realestate_type_id) REFERENCES realestate_type(id),
+	ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
+	ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id);
 
 ALTER TABLE visit_request
-ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id);
+	ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id);
 
 INSERT INTO realestate_type (description) VALUES
 	('Garage'),
