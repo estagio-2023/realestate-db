@@ -69,6 +69,11 @@ ADD CONSTRAINT fk_realestate_type_id FOREIGN KEY (fk_realestate_type_id) REFEREN
 ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
 ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id);
 
+ALTER TABLE visit_request
+ADD fk_agent_id INT,
+ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id);
+
+
 INSERT INTO realestate_type (description) VALUES
 	('Garage'),
 	('Bedroom'),
