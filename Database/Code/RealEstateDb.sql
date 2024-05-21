@@ -32,7 +32,7 @@ CREATE TABLE visit_request (
     id SERIAL PRIMARY KEY,
     name VARCHAR(150),
     email VARCHAR(150) NOT NULL,
-    fk_realestate_id INT
+    fk_realestate_id INT,
 	fk_agent_id INT
 );
 
