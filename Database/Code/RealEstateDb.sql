@@ -32,6 +32,10 @@ CREATE TABLE visit_request (
     id SERIAL PRIMARY KEY,
     name VARCHAR(150),
     email VARCHAR(150) NOT NULL,
+	date DATE NOT NULL,
+	start_time INT NOT NULL,
+	end_time INT NOT NULL,
+	confirmed BOOLEAN NOT NULL,
     fk_realestate_id INT
 );
 
