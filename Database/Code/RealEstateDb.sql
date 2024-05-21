@@ -1,18 +1,22 @@
-CREATE TABLE typology
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE typology (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
-CREATE TABLE amenity
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE amenity (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
-CREATE TABLE city
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE city (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
-CREATE TABLE realestate_type
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE realestate_type (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
 CREATE TABLE agent (
     id SERIAL PRIMARY KEY,
@@ -117,13 +121,13 @@ INSERT INTO city (description) VALUES
 	('Viseu');
 
 INSERT INTO customer (name, email, password) VALUES 
-('John Doe', 'johndoe@gmail.com', 'password123');
+	('John Doe', 'johndoe@gmail.com', 'password123');
 
 INSERT INTO agent (name, phone_number, email) VALUES 
-('Jane Smith', '+1234567890', 'janesmith@gmail.com');
+	('Jane Smith', '+1234567890', 'janesmith@gmail.com');
 
 INSERT INTO realestate (title, address, zip_code, description, build_date, price, square_meter, energy_class, fk_customer_id, fk_agent_id, fk_realestate_type_id, fk_city_id, fk_typology_id) VALUES 
-('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1, 1);
+	('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1, 1);
 
 INSERT INTO visit_request (name, email, fk_realestate_id) VALUES 
-('Alice Johnson', 'alice@gmail.com', 1);
+	('Alice Johnson', 'alice@gmail.com', 1);
