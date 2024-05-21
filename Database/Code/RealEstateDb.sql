@@ -33,6 +33,7 @@ CREATE TABLE visit_request (
     name VARCHAR(150),
     email VARCHAR(150) NOT NULL,
     fk_realestate_id INT
+	fk_agent_id INT
 );
 
 CREATE TABLE realestate (
@@ -70,9 +71,7 @@ ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
 ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id);
 
 ALTER TABLE visit_request
-ADD fk_agent_id INT,
 ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id);
-
 
 INSERT INTO realestate_type (description) VALUES
 	('Garage'),
