@@ -1,18 +1,22 @@
-CREATE TABLE typology
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE typology (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
-CREATE TABLE amenity
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE amenity (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
-CREATE TABLE city
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE city (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
-CREATE TABLE realestate_type
-(id SERIAL  PRIMARY KEY  NOT NULL ,
-description varchar(50) );
+CREATE TABLE realestate_type (
+	id SERIAL  PRIMARY KEY  NOT NULL,
+	description varchar(50) 
+);
 
 CREATE TABLE agent (
     id SERIAL PRIMARY KEY,
@@ -32,7 +36,8 @@ CREATE TABLE visit_request (
     id SERIAL PRIMARY KEY,
     name VARCHAR(150),
     email VARCHAR(150) NOT NULL,
-    fk_realestate_id INT
+    fk_realestate_id INT,
+	fk_agent_id INT
 );
 
 CREATE TABLE realestate (
@@ -66,6 +71,9 @@ ADD CONSTRAINT fk_customer_id FOREIGN KEY (fk_customer_id) REFERENCES customer(i
 ADD CONSTRAINT fk_realestate_type_id FOREIGN KEY (fk_realestate_type_id) REFERENCES realestate_type(id),
 ADD CONSTRAINT fk_city_id FOREIGN KEY (fk_city_id) REFERENCES city(id),
 ADD CONSTRAINT fk_typology_id FOREIGN KEY (fk_typology_id) REFERENCES typology(id);
+
+ALTER TABLE visit_request
+	ADD CONSTRAINT fk_agent_id FOREIGN KEY (fk_agent_id) REFERENCES agent(id);
 
 INSERT INTO realestate_type (description) VALUES
 	('Garage'),
@@ -111,10 +119,10 @@ INSERT INTO city (description) VALUES
 	('Viseu');
 
 INSERT INTO customer (name, email, password) VALUES 
-('John Doe', 'johndoe@gmail.com', 'password123');
+	('John Doe', 'johndoe@gmail.com', 'password123');
 
 INSERT INTO agent (name, phone_number, email) VALUES 
-('Jane Smith', '+1234567890', 'janesmith@gmail.com');
+	('Jane Smith', '+1234567890', 'janesmith@gmail.com');
 
 INSERT INTO realestate (title, address, zip_code, description, build_date, price, square_meter, energy_class, fk_customer_id, fk_realestate_type_id, fk_city_id, fk_typology_id) VALUES 
 ('Beautiful House', '123 Main Street', '12345', 'Lovely family home', 2020, 250000.00, 200, 'A', 1, 1, 1, 1);
